@@ -71,7 +71,7 @@
 						<p>Project Euler Progress:</p>
 						<p>
 							<a href="https://projecteuler.net/" target="_blank">
-								<img src="https://projecteuler.net/profile/h.ho.png" />
+								<img id="euler" src="https://projecteuler.net/profile/h.ho.png" />
 							</a>
 						</p>
 					</div>
@@ -298,6 +298,13 @@
 		ga('create', 'UA-75264004-1', 'auto');
 
 		ga('send', 'pageview');
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			d = new Date();
+			$('#euler').attr('src', $('#euler').attr('src') + '?timestamp=' + d.getTime());
+		});
 	</script>
 </body>
 
